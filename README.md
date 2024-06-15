@@ -1,5 +1,5 @@
 Aplicación CRUD Backend con Node.js, Express y SQL Server
-
+#
 
 Descripción General
 
@@ -9,7 +9,7 @@ y sus solicitudes relacionadas. Está construido utilizando Node.js y Express, y
 La aplicación permite realizar operaciones CRUD en empleados y solicitudes, asegurando que todas las interacciones con la base de datos sean seguras.
 
 
-
+#
 Tecnologías Utilizadas
 
 Node.js: Entorno de ejecución de JavaScript.
@@ -18,7 +18,7 @@ mssql: Cliente de Microsoft SQL Server para Node.js.
 dotenv: Carga variables de entorno desde un archivo .env a process.env.
 
 
-
+#
 Requisitos Previos
 
 Asegúrate de tener instalados los siguientes programas en tu sistema:
@@ -28,7 +28,7 @@ npm (Node Package Manager)
 Microsoft SQL Server
 
 
-
+#
 Configurar variables de entorno
 
 Crea un archivo .env en el directorio backend con el siguiente contenido, ajustándolo con tus credenciales y detalles de la base de datos:
@@ -44,7 +44,7 @@ DB_SERVER=tuServidorDeBaseDeDatos
 DB_DATABASE=tuNombreDeBaseDeDatos
 
 
-
+#
 Crear tablas en SQL Server
 
 
@@ -74,7 +74,7 @@ CREATE TABLE Solicitud (
 );
 
 
-
+#
 Para este ejercicio se creó la Base de Datos como 
 
 CREATE DATABASE empleados_konecta;
