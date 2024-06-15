@@ -12,9 +12,9 @@ export const getSolicitudes = async (req, res) => {
 };
 
 export const createSolicitud = async (req, res) => {
-    const { codigo, descripcion, resumen, id_empleado } = req.body;
+    const { codigo, descripcion, resumen } = req.body;
 
-    if (codigo == null || descripcion == null || resumen == null || id_empleado == null) {
+    if (codigo == null || descripcion == null || resumen == null) {
         return res.status(400).json({ msg: "Bad Request - Solicitud Incompleta o Fallida" });
     }
 
@@ -24,10 +24,8 @@ export const createSolicitud = async (req, res) => {
             .input("codigo", sql.VarChar, codigo)
             .input("descripcion", sql.VarChar, descripcion)
             .input("resumen", sql.VarChar, resumen)
-            .input("id_empleado", sql.Int, id_empleado)
             .query(queries.createSolicitud);
-
-        res.json({ codigo, descripcion, resumen, id_empleado });
+        res.json({ codigo, descripcion, resumen });
     } catch (error) {
         res.status(500);
         res.send(error.message);
